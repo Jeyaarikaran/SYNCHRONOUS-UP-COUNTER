@@ -41,33 +41,27 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 /* write all the steps invloved */
 
 **PROGRAM**
-````
+```
 module exp11 (
     input clk,    // Clock signal
     input rst,    // Reset signal (active high)
     output [3:0] q // 4-bit output
 );
-
     wire [3:0] j, k; // J and K inputs for each JK flip-flop
     wire [3:0] t;    // Toggle signal for each flip-flop
-
     // Generate the toggle signals for each stage
     assign j[0] = 1'b1; // First flip-flop toggles on every clock pulse
     assign k[0] = 1'b1;
     assign t[0] = q[0]; // Output of the first flip-flop
-
     assign j[1] = q[0]; // Second flip-flop toggles on q[0] high
     assign k[1] = q[0];
     assign t[1] = q[1];
-
     assign j[2] = q[0] & q[1]; // Third flip-flop toggles on q[1:0] high
     assign k[2] = q[0] & q[1];
     assign t[2] = q[2];
-
     assign j[3] = q[0] & q[1] & q[2]; // Fourth flip-flop toggles on q[2:0] high
     assign k[3] = q[0] & q[1] & q[2];
     assign t[3] = q[3];
-
     // Instantiate 4 JK flip-flops
     jk_flipflop jk0 (.clk(clk), .rst(rst), .j(j[0]), .k(k[0]), .q(q[0]));
     jk_flipflop jk1 (.clk(clk), .rst(rst), .j(j[1]), .k(k[1]), .q(q[1]));
