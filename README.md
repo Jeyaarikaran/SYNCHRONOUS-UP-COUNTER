@@ -102,8 +102,13 @@ endmodule
 ![Screenshot 2024-12-17 170436](https://github.com/user-attachments/assets/eba45f4b-7ad2-4080-ae81-bf6e03652f2f)
 
 **TIMING DIAGRAM FOR IP COUNTER**
-![Screenshot 2024-12-17 170630](https://github.com/user-attachments/assets/45cf8aaf-e8d6-4e52-9931-73d1e0bb522b)
+![Screenshot 2024-12-17 172052](https://github.com/user-attachments/assets/10599168-c7b8-4294-ba4c-56ed8b2ebac5)
+
 
 **TRUTH TABLE**
+ ![image](https://github.com/user-attachments/assets/687d00ff-efbe-441f-a903-1a1bae927224)
 
 **RESULTS**
+```
+Hence a 4 bit synchronous up counter is implemented correctly and program code is successfully executed.
+```
